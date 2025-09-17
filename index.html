@@ -241,15 +241,57 @@
         cursor: pointer;
     }
     .carousel{
+        width: 100%;
+        overflow-x: auto;
         display: flex;
         gap: 1em;
+        scroll-behavior: smooth;
+        anchor-name: --carousel;
+        scroll-snap-type: x mandatory;
+        scroll-marker-group: after;
+        margin-left: 18px;
     }
     .carousel::-webkit-scrollbar{
         display: none;
     }
-    .carousel::-webkit-scrollbar-button(right){
-        content: 'right';
+    .carousel::scroll-button(right), .carousel::scroll-button(left){
+        content: '→';
+        font-size: 40px;
+        border: none;
+        background-color:rgb(225, 135, 150);
+        font-family: consolas;
+        color: white;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        padding-bottom: .1rem;
+        cursor: pointer;
+        position: fixed;
+        position-anchor: --carousel;
+        position-area: right center;
+        translate: -50%;
     }
+    .carousel.carousel::scroll-button(right){
+        margin-left: -34px;
+    }
+    .carousel::scroll-button(left){
+        content: "←";
+        position-area: left center;
+        translate: 50%;
+    }
+    /*.carousel::scroll-button(left){
+        content: '←';
+        font-size: 40px;
+        border: none;
+        background-color:rgb(225, 135, 150);
+        font-family: consolas;
+        color: white;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        padding-bottom: .1rem;
+        cursor: pointer;
+    }*/
     .card{
         width: 500px;
         height: 400px;
@@ -257,6 +299,26 @@
         flex: 0 0 20em;
         background-color: var(--primary-color);
         border-radius: 1em;
+    }
+    .carousel::scroll-button(right):disabled,.carousel::scroll-button(left):disabled{
+        opacity: 0.5;
+        cursor: auto;
+    }
+    .card::scroll-marker{
+        content: '';
+        height: .5em;
+        width: .5em;
+        background-color: rgb(235, 120, 139);
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+    .carousel::scroll-marker-group{
+        display: flex;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    .card::scroll-marker:target-current{
+        background-color: white;
     }
     </style>
 </head>
