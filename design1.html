@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Its the new design</title>
+    <style>
+        body{
+            background-color: rgb(248, 227, 246);
+        }
+        .raven{
+            width: 1475px;
+            height:80px;
+            background-color: rgb(249, 214, 220);
+            margin: -10px;
+            padding: -10px;
+            margin-top: -28px;
+            position: fixed;
+            display: flex;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+        .raven h1{
+            font-size: 40px;
+            margin-left: 20px;
+            padding-right:10px ;
+        }
+        .location p{
+            width: 110px;
+            height: 0px;
+            margin-top:31px;
+            font-size: 20px;
+            padding-left: 10px;
+            display: flex;
+            margin-left: -2px;
+        }
+        .location{
+            height: 75px;
+            cursor: pointer;
+        }
+        #location-icon{
+            font-size: 20px;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+        .location:hover{
+            border: 1px solid black;
+        }
+        .search{
+            display: block;
+            margin-top: 38px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: transparent;
+        }
+        .search-select{
+            border-radius: 0px;
+            height: 30px;
+            cursor: pointer;
+        }
+      
+        .search-panel{
+            margin: 0px;
+            padding: 0px;
+            margin-top: 35px;
+        }
+        #search-icon{
+            margin:0px;
+            padding: 0px;
+            margin-left: 150px;
+            font-size: 20px;
+            background-color: rgb(225, 135, 150);
+            width: 30px;
+            height: 30px;
+            padding-top:8px ;
+            border-radius: 5px 0 0 5px;
+        }
+        #search-icon:hover{
+            background-color: rgb(237, 174, 184);
+        }
+        .search-panels{
+            width: 400px;
+            margin: 0px;
+            padding: 0px;
+            padding-left: 0px;
+            margin-left: -3.5px;
+            padding-top:6px ;
+            height: 30px;
+            border-radius: 0 5px 5px 0;
+            border: 0px;
+        }
+        #wishlist-icon{
+           margin-top: 15px;
+           width: 40px;
+           height: 40px;  
+           margin-left: 10px;        
+           font-size: 30px;
+           color: rgb(225,135,150);
+           background-color:transparent;
+           padding: 0px;  
+           display: flex; 
+           margin-bottom: -10px;
+           cursor: pointer;
+        }
+        #wishlist-icon2{
+           margin-top: -40px;
+           width: 40px;
+           height: 40px;  
+           margin-left: 10px;        
+           font-size: 30px;
+           background-color:transparent;
+           padding: 0px;  
+           display: flex; 
+           margin-bottom: -10px;
+           cursor: pointer;
+           background-size: cover;
+           color: transparent;
+        }
+        #wishlist-icon2:hover{
+            color: rgb(225,135,150);
+
+        }
+        .wishlist{
+            margin-left: 100px;
+            padding: 0px;
+        }
+    #cart{
+        margin-top: 0rem;
+        width: 50px;
+        height: 35px;
+        padding-top:1.5rem;
+        color: rgb(225, 135, 150) ;
+        font-size: 20px;
+        border-radius: 4px;
+        margin-left: 100px;
+        margin-top: 20px;
+        margin-right:5px ;   
+    }
+
+    #cart:hover{
+        background-color: rgb(235, 120, 139);
+        color: white;
+    }
+    .profile{
+        width: 245px;
+        height: 55px;
+        border: 1px solid black;
+        margin-top:22px;
+        display: flex;
+    }
+    button{
+        width: 150px;
+        height: 55px;
+        background-color: transparent;
+        border: 0px;
+    }
+    .sign button{
+        margin-top: 0rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        cursor: pointer;
+        height: 60px;
+        width: 90px;
+    }
+    .sign{
+        width: 90px;
+        color:black;
+        font-size: 15px;
+        font-family:'Times New Roman', Times, serif;
+    }
+    button:hover{
+        border: 1px solid black;
+    }
+    .user-profile{
+        align-items: center;
+        width: 80px;
+        height: 39px;
+        margin-top: 0rem;
+        padding-top: 1rem;
+        padding-left: 15px;
+    }
+    .user-profile:hover{
+        border: 1px solid black;
+    }
+    #bars{
+        width: 25px;
+        height: 35px;
+        margin-left: 5px;
+        font-size: 20px;
+        border-radius: 8px;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        display: flex;
+        cursor: pointer;
+        color: black;
+        border: border-box;
+    }
+    #bars:hover{
+        background-color: rgb(225, 135, 150);
+        color: white;
+    }
+    .list-container{
+        background-color:rgb(237, 174, 184);
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        margin: -10px;
+        padding: -10px;
+        margin-top:52px;
+        display: flex;
+        float: left;
+    }
+    .list-container ul{
+        float:left;
+        width: 700px;
+        height: 25px;
+        display: flex;
+        background-color: transparent;
+        justify-content: space-between;
+    }
+    .lists{
+        margin-top: -1px;
+        padding-top: 5px;
+        list-style-type: none;
+        text-decoration: none;
+        float: left;
+    }
+    .lists li{
+        background-color: transparent;
+        width: 90px;
+        height:25px;
+        margin-top: -2px;
+        text-align: center;
+        padding-top: 2px;
+        border-radius: 5px;
+    }
+    .lists li:hover{
+        background-color: rgb(235, 120, 139);
+        cursor: pointer;
+    }
+    .carousel{
+        display: flex;
+        gap: 1em;
+    }
+    .carousel::-webkit-scrollbar{
+        display: none;
+    }
+    .carousel::-webkit-scrollbar-button(right){
+        content: 'right';
+    }
+    .card{
+        width: 500px;
+        height: 400px;
+        margin-top: 100px;
+        flex: 0 0 20em;
+        background-color: var(--primary-color);
+        border-radius: 1em;
+    }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="list-container">
+    <ul class="lists"> 
+        <li>All</li>
+        <li>Shoes</li>
+        <li>T-Shirts</li>
+        <li>Pants</li>
+        <li>Accesories</li>
+        <li>Watches</li>
+    </ul>
+</div>    
+<div class="raven">
+    <h1>Raven</h1>
+<div class="location">
+    <p><i id="location-icon" class="fa-solid fa-location-dot"></i>Delivered to India</p>
+</div>
+<div class="search">
+<select class="search-select">
+    <option value="eng">English</option>
+    <option value="hin">Hindi</option>
+    <option value="fre">French</option>
+    <option value="spa">Spanish</option>
+</select>
+</div>
+<div class="search-panel">
+        <i id="search-icon"class="fa-solid fa-magnifying-glass"></i>
+        <input type="text"  placeholder="Search here" class="search-panels">
+
+</div>
+        <p class="wishlist"><i id="wishlist-icon" class="fa-regular fa-heart"></i><i id="wishlist-icon2" class="fa-solid fa-heart"></i>Wishlist</p>
+        <i id="cart" class="fa-solid fa-cart-shopping"></i>
+
+        <div class="profile">
+            <a href="first.html">
+                <button class="sign" >Sign In or Login</button>
+            </a>
+            <p class="user-profile"><i id="profile-icon" class="fa-solid fa-user"></i>Profile</p>
+            <div id="bars">
+            <i class="fa-solid fa-bars"></i>  
+            </div> 
+            
+        </div>
+</div>
+<div class="carousel">
+    <img class="card" src="shoes.jpg">
+    <img class="card" src="jeans.webp">
+    <img class="card" src="t-shirt.webp">
+    <img class="card" src="watch.webp">
+</div>
+
+</body>
+</html> 
